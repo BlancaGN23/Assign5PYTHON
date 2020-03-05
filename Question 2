@@ -1,3 +1,9 @@
+#Blanca Nino
+#LHC Programming Class
+#Spring 2020
+#Assign 5, Q2
+#like a hipster, import a double column file of random numbers and find the linear correlation coefficient between them 
+
 import math
 
 #set some variables
@@ -33,7 +39,7 @@ arrayy=[2,4,5,6,7,8,9]
 		#arrayx.append(float(cols1[0]))
 		#cols2 = line.split(",")
 		#arrayy.append(float(cols2[1]))
-
+#this SHOULD give me two nice arrays filled with floats that I can then play with
 
 
 
