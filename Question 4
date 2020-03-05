@@ -37,4 +37,11 @@ while (x<lim2):
 print ("Area under curve: ", AT)
 
 
-
+#For this script, only the equation is hard coded
+#For the equation given, I found the following values per number of bins
+#n = 10: 3357.21
+#n = 50: 3928.34
+#n = 100: 4002.88
+#n = 500: 4063.02
+#as expected, the more number of bins gives you a more accurate approximation 
+#these values are compared to the actual integral result = 4078.13
