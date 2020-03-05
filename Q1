@@ -1,3 +1,10 @@
+
+#Blanca Nino
+#LHC Programming course
+#Spring 2020
+#using python, and not calling any hardcode operations, find the standard deviation of a list of numbers
+
+
 #call math header, use for siple operations
 import math
 
