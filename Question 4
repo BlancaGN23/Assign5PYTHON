@@ -1,0 +1,40 @@
+#Blanca Nino
+#LHC Programming: Assign 5 Q 4
+#Spring 2020
+#Like a hipster, find the Riemann sum of the equation
+
+#import basic operation header, set AT = 0
+import math
+AT = 0
+
+#user input limits, number of bins
+#set these values as integers
+nb = input("Starting limit: ")
+lim1 = int(nb)
+
+nb2 = input("Ending limit: ")
+lim2 = int(nb2)
+
+nb3 = input("Number of bins: ")
+bins = int(nb3)
+
+#from these values, find width of each bin
+width = (lim2 - lim1)/bins
+x = int(lim1)
+
+
+#before we hot the ending limit
+#calculate the height at each point
+#find area = width * height
+#AT is running total of areas
+while (x<lim2):
+	H = (3*x*x*x) - (4*x*x) + (3.2198*x)
+	A = width*H
+	AT = AT + A
+	x = x + width
+	
+#print out total area under the curve
+print ("Area under curve: ", AT)
+
+
+
