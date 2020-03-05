@@ -1,0 +1,77 @@
+import math
+
+#set some variables
+sumx = 0
+sumy = 0
+sizex = 0
+sizey = 0
+stdsumx = 0
+stdsumy = 0
+Esum=0
+
+arrayx=[2,4,5,6,7,8,9]
+arrayy=[2,4,5,6,7,8,9]
+
+#WHAT I NEED TO DO
+#open with (text file)
+#iterate through the text file, adding each column to a seperate array
+#i couldn't figure this part out, I was having trouble with the delimiter - or figuring out how to specify the spacing between columns
+#once that was semi-solved, I couldn't convert the str characters to floats
+#the odd part is that I was able to do this with C++
+
+
+
+
+#ATTEMPT AT SOLUTION, but doesnt work
+#open text file
+#with open ("/home/ubuntu/Desktop/randompairs.txt", 'r') as data:
+
+	#iterate through the file,
+	#for line in data, adding column 1(0) to arrayx, column 2 (1) to arrayy
+	#when adding the value tothe array, convert it to a float
+		#cols1 = line.split(",")
+		#arrayx.append(float(cols1[0]))
+		#cols2 = line.split(",")
+		#arrayy.append(float(cols2[1]))
+
+
+
+
+
+
+#iterate through the lists to find their size and sum of all values
+for x in arrayx:
+	sumx = sumx + x
+	sizex = sizex + 1
+
+for y in arrayy:
+	sumy = sumy + y
+	sizey = sizey + 1
+
+#averages for each list
+xavg = sumx/sizex
+yavg = sumy/sizey
+
+	#iterate through the lists again to get the value - average, square and sum - equals the top portion for the standard deviation equation
+for x in arrayx:
+	stdsumx = (x-xavg)**2 + stdsumx 
+
+for y in arrayy:
+	stdsumy = (y-yavg)**2 + stdsumy 
+
+	#Expectation values
+	#iterate through the values in the list, add x and y components, divide by size of list
+for i in range (1, sizex):
+	E=arrayx[i]+arrayy[i]
+	Esum = E + Esum
+	Exp = Esum/sizex
+
+	#final standard deviation calculations for X and Y
+	STDX = (stdsumx/sizex)**0.5
+	STDY = (stdsumy/sizey)**0.5
+	
+	#Final calculations for P
+	P = (Exp - (xavg * yavg))/ (STDX*STDY)
+
+
+print ("Linear correlation coefficient is", P)
