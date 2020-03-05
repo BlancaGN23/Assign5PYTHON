@@ -1,0 +1,38 @@
+#call math header, use for siple operations
+import math
+
+#set some initial variables = 0
+sum = 0
+size = 0
+runsum = 0
+
+
+#predefine an array - not sure if this is considered hard coding 
+
+array=[2,4,5,8,-10]
+
+#iterate through the numbers in the array to find the sum, and the size 
+for x in array:
+	sum = sum + x	
+	size = size+1
+
+#calcuation for sum
+avg = sum/size
+
+#iterate throught the array again, to subtract each number from the average, take the square, and add it to the running sum, which is the top value of the stddev equation
+for x in array:
+	runsum = (x - avg)**2 + runsum
+
+#stdev calculations 
+#instead of square root, to the 1/2 power
+stdev = (runsum/size)**.5
+	
+
+#print out some values of interest
+print('sum is', sum)
+print('size is', size)
+print('avg', avg)
+print('Stdev', stdev)
+		
+
+
